@@ -1,0 +1,26 @@
+GET http://localhost:3000/currencies/
+###
+GET http://localhost:3000/currencies/5ecbb2a54e7f37235cf8fa7c
+
+###
+POST http://localhost:3000/currencies/
+Content-Type: application/json
+
+{   "name":"USD",
+    "sellPrice":"200",
+    "buyPrice":"193"
+}
+
+###
+
+DELETE  http://localhost:3000/currencies/5ecbb2a54e7f37235cf8fa7c
+
+
+###
+
+PATCH   http://localhost:3000/currencies/5ecbb5dc4e7f37235cf8fa7d
+Content-Type: application/json
+
+{
+    "sellPrice":"400"
+}
