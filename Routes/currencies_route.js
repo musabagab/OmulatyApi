@@ -68,7 +68,7 @@ async function getCurrency(req, res, next) {
     try {
         currency = await Currency.findById(req.params.id);
         if (currency == null) {
-            return res.status(404).json({ message: 'Cannot find currency' });
+            return res.status(404).json({ message: 'Cannot find that currency' });
         }
     } catch (err) {
         return res.status(500).json({ message: err.message });
