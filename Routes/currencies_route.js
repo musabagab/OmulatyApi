@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-// Creating One
+// Creating One new currency
 router.post('/', async (req, res) => {
     const currency = new Currency({
         name: req.body.name,
