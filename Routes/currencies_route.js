@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Getting One
+// Getting One currency
 router.get('/:id', getCurrency, (req, res) => {
     res.send(res.currency);
 });
