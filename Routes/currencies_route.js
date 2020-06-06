@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const currency = new Currency({
         name: req.body.name,
+        arabicName: req.body.arabicName,
         sellPrice: req.body.sellPrice,
         buyPrice: req.body.buyPrice,
     });
@@ -45,6 +46,9 @@ router.patch('/:id', getCurrency, async (req, res) => {
         res.currency.buyPrice = req.body.buyPrice;
     }
 
+    if (req.body.arabicName != null) {
+        res.currency.arabicName = req.body.arabicName;
+    }
     try {
         const updateCurrency = await res.currency.save();
         res.json(updateCurrency);
