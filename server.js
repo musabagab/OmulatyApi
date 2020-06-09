@@ -14,8 +14,9 @@ app.use(express.json());
 const currenciesRoute = require('./Routes/currencies_route');
 app.use('/currencies', currenciesRoute);
 
+app.listen(process.env.PORT || 3000);
 
-app.listen(3000, () => console.log('Server started!'));
+
 
 // SERVER => https://agile-reaches-50538.herokuapp.com/
 // mongodb://<dbuser>:<dbpassword>@ds139436.mlab.com:39436/currencies
