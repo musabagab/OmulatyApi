@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const DATABASE_URL = "mongodb://musabagab:mnma1996@ds139436.mlab.com:39436/currencies";
+const DATABASE_URL = "mongodb://musabagab:mnma1996@ds139436.mlab.com:39436/";
 // DATABASE CONNECTION get url from ENV
 mongoose.connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
