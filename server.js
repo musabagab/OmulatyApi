@@ -13,9 +13,9 @@ app.use(express.json());
 // ROUTES
 const currenciesRoute = require('./Routes/currencies_route');
 app.use('/currencies', currenciesRoute);
-
-app.listen(process.env.PORT || 3000, () => {
-    console.log('server connected');
+const port = 80;
+app.listen(port, () => {
+    console.log('server connected ' + port);
 });
 
 
